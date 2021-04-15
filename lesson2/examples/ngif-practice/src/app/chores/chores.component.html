@@ -4,6 +4,7 @@
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
 </div>
+<p *ngIf = "chores.length > finishedChores.length">Work harder!</p>
 <hr>
 <div class="doneChores">
     <h3>Done Chores</h3>
@@ -11,4 +12,5 @@
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
 </div>
+<img src="targetImage" alt="">
 <hr>
