@@ -8,6 +8,7 @@
 
 h3 {
     text-align: center;
+    color: green;
 }
 
 img {
@@ -18,5 +19,6 @@ img {
 }
 
 p {
-  color: purple;
+  color: green;
 }
+
