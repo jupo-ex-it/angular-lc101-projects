@@ -1,8 +1,16 @@
 <div class='movies col-4'>
-    <h3>Movies to Watch</h3>
-    <ol>
-       <li *ngFor ="let movie of movies">{{movie}}</li>
-    </ol>
-    <hr>
+  <h3>Movies to Watch</h3>
+  <ol>
+    <li *ngFor="let movie of movies">{{movie}}</li>
+  </ol>
+  <hr>
+  <div *ngIf="!movies.includes(newMovie) && newMovie !== '' else invalidMovie">
+  <input #newMovie (keyup.enter)='addMovie(newMovie.value); newMovie.value = ""' type='text' placeholder="Enter Movie Title Here"/>
+  <button (click)='addMovie(newMovie.value); newMovie.value = ""'>Add</button>
+</div>
+<ng-template #invalidMovie>
+  <input #newMovie (keyup.enter)='addMovie(newMovie.value); newMovie.value = ""' type='text' placeholder="Enter Legit Movie Title Please"/>
+  <button (click)='addMovie(newMovie.value); newMovie.value = ""'>Add</button>
+</ng-template>
+</div>
 
- </div>
